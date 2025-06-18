@@ -8,30 +8,34 @@ Carrera: Ingeniería en Informática – Año: 2025
 
 /trabajo_clinica/
 │
-├── clases/ # Lógica del modelo
-│ ├── paciente.py
-│ ├── medico.py
-│ ├── especialidad.py
-│ ├── turno.py
-│ ├── receta.py
-│ ├── historia_clinica.py
-│ ├── clinica.py
-│ └── excepciones.py
+├── clases/                # Lógica del modelo
+│   ├── paciente.py
+│   ├── medico.py
+│   ├── especialidad.py
+│   ├── turno.py
+│   ├── receta.py
+│   ├── historiaclinica.py
+│   ├── clinica.py
+│   └── excepciones.py
 │
-├── cli/ # Interfaz por consola
-│ └── interfaz.py
+├──  cli.py                  # Interfaz por consola
+│ 
+├── test/                  # Pruebas unitarias por clase
+│   ├── test_paciente.py
+│   ├── test_medico.py
+│   ├── test_especialidad.py
+│   ├── test_turno.py
+│   ├── test_receta.py
+│   ├── test_historiaclinica.py
+│   ├── test_clinica.py
+│   ├── test_excepciones.py
+│   └── test_cli.py
 │
-├── tests/ # Pruebas unitarias por clase
-│ ├── test_paciente_y_medico.py
-│ ├── test_especialidad.py
-│ ├── test_turno.py
-│ ├── test_receta.py
-│ ├── test_historia_clinica.py
-│ ├── test_clinica.py
-│ └── init.py
-│
-├── main.py # Archivo principal de entrada
-├── README_INSTRUCTIVO.md # Documentación
+├── README_INSTRUCTIVO.md              # Documentación
+
+
+
+
 
 ## ✅ **Ejecutar los tests**
 Desde el directorio raíz del proyecto, ejecutar todos los tests:
@@ -89,3 +93,14 @@ RecetaInvalidaException
 
 ✔️ El CLI se prueba simulando entradas con unittest.mock.
 
+# ▶️ Ejecución del sistema
+Desde consola, siempre ejecutar desde el directorio raíz:
+
+python cli.py
+
+Menú disponible:
+- Agregar paciente o médico
+- Agendar turno (valida fecha, día y disponibilidad)
+- Emitir receta (verifica existencia y contenido)
+- Ver historia clínica
+- Listar pacientes, médicos y turnos
